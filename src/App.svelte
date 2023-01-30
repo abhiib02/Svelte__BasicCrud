@@ -34,7 +34,8 @@
   
     function update(index){
       entry = entries.arr[index];
-      entries.arr[index] = prompt(entry);
+      entries.arr[index] = prompt(entry) ? null : entries.arr[index];
+
       entry='';
       localStorage.removeItem('entries');
       localStorage.setItem('entries',JSON.stringify(entries))
