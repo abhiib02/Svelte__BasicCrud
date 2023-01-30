@@ -10,7 +10,7 @@
     
     function create(){
 
-      if(entry!=(null&&'undefined')){
+      if(entry!=(null&&'undefined'&&"")){
 
         entries.arr.push(entry);
         localStorage.setItem('entries',JSON.stringify(entries))
