@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import { is_empty } from 'svelte/internal';
   
-    let entry;
+    let entry,entry1;
     let entries = {'arr':[]};
   
     
@@ -34,7 +34,8 @@
   
     function update(index){
       entry = entries.arr[index];
-      entries.arr[index] = prompt(entry) !== '' ? entry : entries.arr[index];
+      entry1=prompt(entry);
+      entries.arr[index] = entry1 !== '' ? entry1 : entries.arr[index];
 
       entry='';
       localStorage.removeItem('entries');
