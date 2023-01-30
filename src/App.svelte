@@ -9,7 +9,7 @@
     
     
     function create(){
-      if(entry!=(null&&'')){
+      if(entry!=(null||'')){
         entries.arr.push(entry);
         localStorage.setItem('entries',JSON.stringify(entries))
         entries=entries; // pretty weird solution to add reactivity to array assing array to array after pushing ( arr = arr;)
