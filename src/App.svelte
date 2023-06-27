@@ -37,12 +37,18 @@
     function update(index){
       entry = entries.arr[index];
       entry1=prompt(entry);
-      entries.arr[index] = (entry1 !== '') ? entry1 : entries.arr[index];
-
-      entry='';
+     if (entry1 === null) {
+         alert("canclled");
+            return; //break out of the function early
+        }
+else{
+      entries.arr[index] =  entry1 ;
       localStorage.removeItem('entries');
       localStorage.setItem('entries',JSON.stringify(entries))
       alert("updated")
+}
+       
+      
     }
     function dele(index){
       entries.arr.splice(index,1);
