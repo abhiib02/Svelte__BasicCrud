@@ -51,11 +51,19 @@ else{
       
     }
     function dele(index){
-      entries.arr.splice(index,1);
-      entries.arr = entries.arr;
-      localStorage.removeItem('entries');
-      localStorage.setItem('entries',JSON.stringify(entries))
-      //alert('deleted');
+        if (window.confirm('Do you Really Want to Delete this Entry?'))
+        {
+            entries.arr.splice(index,1);
+            entries.arr = entries.arr;
+            localStorage.removeItem('entries');
+            localStorage.setItem('entries',JSON.stringify(entries))
+            alert('deleted');
+        }
+        else
+        {
+            // They clicked no
+        }
+      
       
     }
   
