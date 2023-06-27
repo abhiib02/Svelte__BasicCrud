@@ -37,7 +37,7 @@
     function update(index){
       entry = entries.arr[index];
       entry1=prompt(entry);
-      entry = entry1 !== NULL ? entry1 : entries.arr[index];
+      entries.arr[index] = (entry1 !== '') ? entry1 : entries.arr[index];
 
       entry='';
       localStorage.removeItem('entries');
